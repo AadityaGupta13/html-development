@@ -5,7 +5,45 @@
     <title>HTML Form Elements</title>
     <style>
         body{
-            font-family: Arial, sans-serif;
+            font-family: "Microsoft YaHei Light", sans-serif, sans-serif;
+            font-size: 16px;
+        }
+        #form1 input{
+            font-family: "Microsoft YaHei Light", sans-serif;
+            font-size: 20px;
+            color: grey;
+            padding:5px;
+            margin:5px;
+            outline: none;
+            border: solid black;
+            border-width: 0 0 2px 0;
+            background-color: white;
+        }
+        #form1 input:focus{
+            border-width:0 0 2px 0 !important;
+            border: solid blue;
+        }
+        #form1 input[type=submit]{
+            border:0 solid blue;
+            background-color: blue;
+            color: white;
+        }
+        #form1 input[type=submit]:active{
+            background-color: grey;
+            border:none;
+        }
+        #form2 input{
+            font-family: "Microsoft YaHei Light", sans-serif;
+            font-size: 20px;
+            color: grey;
+            padding:5px;
+            border:2px solid blue;
+            border-radius:5px;
+            background-color: white;
+            outline: none;
+        }
+        #form{
+
         }
     </style>
 </head>
@@ -14,13 +52,43 @@
 
     <!-- Simple Login Form -->
     <h2>Simple Login Form</h2>
+    <form id="form1" action="">
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <input type="submit" value="Log In">
+    </form>
 
     <!-- Login form with Table -->
     <h2>Login Form with Table</h2>
-
+    <form id="form2" action="">
+        <table>
+            <tr>
+                <td><label for="username">Username: </label></td>
+                <td><input type="text" id="username"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password: </label></td>
+                <td><input type="password" id="password"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="margin:auto"><input type="submit" value="Log In"></td>
+            </tr>
+        </table>
+    </form>
     <!-- Select box with Options -->
     <h2>Select Box with Options</h2>
-
+    <form id="form" action="">
+        <label for="Select">
+            <select id="Select">
+                <option value="Option 1" selected>Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option 3">Option 3</option>
+                <option value="Option 4">Option 4</option>
+                <option value="Option 5">Option 5</option>
+            </select>
+        </label>
+    </form>
     <!-- Textarea box -->
     <h2>Textarea box</h2>
 
