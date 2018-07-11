@@ -4,63 +4,41 @@
     <meta charset="UTF-8">
     <title>HTML Form Elements</title>
     <style>
-        body{
+        body {
             font-family: "Microsoft YaHei Light", sans-serif, sans-serif;
             font-size: 16px;
         }
-        #form1 input{
-            font-family: "Microsoft YaHei Light", sans-serif;
-            font-size: 20px;
-            color: grey;
-            padding:5px;
+        form{
+            background-color: orange;
+            width: 400px;
+            padding: 10px;
+            border-radius:10px;
+            box-shadow: 0 0 15px orange;
+        }
+        input, select{
             margin:5px;
-            outline: none;
-            border: solid black;
-            border-width: 0 0 2px 0;
-            background-color: white;
-        }
-        #form1 input:focus{
-            border-width:0 0 2px 0 !important;
-            border: solid blue;
-        }
-        #form1 input[type=submit]{
-            border:0 solid blue;
-            background-color: blue;
-            color: white;
-        }
-        #form1 input[type=submit]:active{
-            background-color: grey;
-            border:none;
-        }
-        #form2 input{
-            font-family: "Microsoft YaHei Light", sans-serif;
-            font-size: 20px;
-            color: grey;
             padding:5px;
-            border:2px solid blue;
-            border-radius:5px;
-            background-color: white;
-            outline: none;
-        }
-        #form{
 
         }
     </style>
 </head>
 <body>
 
-
     <!-- Simple Login Form -->
     <h2>Simple Login Form</h2>
-    <form id="form1" action="">
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
+    <form>
+        <label for="username">Username:</label>
+        <input type="text"> <br>
+        <label for="password">Password:</label>
+        <input type="password"> <br>
         <input type="submit" value="Log In">
+        <input type="reset" value="Reset">
+
     </form>
 
     <!-- Login form with Table -->
     <h2>Login Form with Table</h2>
-    <form id="form2" action="">
+    <form action="">
         <table>
             <tr>
                 <td><label for="username">Username: </label></td>
@@ -71,30 +49,61 @@
                 <td><input type="password" id="password"></td>
             </tr>
             <tr>
-                <td></td>
-                <td style="margin:auto"><input type="submit" value="Log In"></td>
+                <td><input type="submit" value="Log In"></td>
+                <td><input type="reset" value="Cancel"></td>
             </tr>
         </table>
     </form>
     <!-- Select box with Options -->
     <h2>Select Box with Options</h2>
-    <form id="form" action="">
-        <label for="Select">
-            <select id="Select">
-                <option value="Option 1" selected>Option 1</option>
-                <option value="Option 2">Option 2</option>
-                <option value="Option 3">Option 3</option>
-                <option value="Option 4">Option 4</option>
-                <option value="Option 5">Option 5</option>
-            </select>
-        </label>
+    <form>
+        <label for="language">Select a Language:</label>
+        <select id="language">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">Javascript</option>
+            <option value="bootstrap">Bootstrap</option>
+            <option value="jquery">JQuery</option>
+        </select>
     </form>
+
+    <!-- Select box with optgroup-->
+    <h2>Select box with Optgroup</h2>
+    <form action="">
+        <label>Select a language:</label>
+        <select>
+            <optgroup label="language">
+                <option value="java">Java</option>
+                <option value="php">PHP</option>
+            </optgroup>
+            <optgroup label="script">
+                <option value="javascript">Javascript</option>
+                <option value="Shell">Shell</option>
+            </optgroup>
+        </select>
+    </form>
+
     <!-- Textarea box -->
     <h2>Textarea box</h2>
+    <form >
+        <label for="abc">Your message: </label>
+        <textarea id="abc" cols="30" rows="10"></textarea>
+    </form>
 
     <!-- Datalist (HTML5) -->
     <h2>Datalist (HTML5)</h2>
+    <form>
+        <label>Select a language</label>
+        <input list="languages">
+        <datalist id="languages">
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>Javascript</option>
+            <option>Bootstrap</option>
+            <option>JQuery</option>
+        </datalist>
+    </form>
 
-
+    <br><br><br>
 </body>
 </html>
